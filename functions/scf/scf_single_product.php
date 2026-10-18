@@ -1,0 +1,43 @@
+<?php
+
+create_fields(
+	'Карточка товара',
+	'product',
+	[
+		add_field_tab(
+			'product_card_tab_1',
+			'Карточка товара',
+		),
+		add_field_image(
+			'product_card_image',
+			'Картинка',
+		),
+		add_field_tab(
+			'product_card_tab_3',
+			'Таблица',
+		),
+		add_field_text(
+			'product_card_table_title',
+			'Заголовок',
+		),
+		add_field_repeater(
+			'product_card_table_list',
+			'Список',
+			[
+				add_field_text(
+					'product_card_table_list_title',
+					'Заголовок',
+				),
+				add_field_text(
+					'product_card_table_list_text',
+					'Текст',
+				),
+				add_field_text(
+					'product_card_table_list_measure',
+					'Ед.измерения',
+				),
+			]
+		)
+	],
+	'post_type'
+);

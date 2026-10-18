@@ -1,0 +1,34 @@
+@use "../tools" as *;
+
+:root {
+	--color-0: rgba(0, 0, 0, 0);
+	--color-black: #000;
+	--color-white: #fff;
+	// Colors
+	--color-dark: #282525;
+	--color-light: #f2f1ec;
+	--color-accent: #e8c25f;
+	--color-accent-hover: #f8c749;
+	--color-scroll: radial-gradient(164.84% 70.66% at 100% 100%, #fff 0%, #d8af53 100%);
+	--color-scroll-light: rgba(255, 255, 255, 0.4);
+	--color-gradient: linear-gradient(225deg, #e8c25f 0%, #e3d282 50.52%, #d3a647 100%);
+	--color-gradient-card: linear-gradient(165deg, #eec14e 0.04%, #f3dc72 50.52%, #f3be4f 100%);
+
+	// Layouts
+	--header-height: 98px;
+	--section-padding: #{adapt(120, 60)};
+	--section-padding-05: #{adapt(60, 30)};
+
+	--container-width: 1380px;
+	--container-padding: 10px; //! даже если контейнер на весь экран, отступы оставь а ширину сделай на 100%
+
+	// Fonts
+	--font-size-html: 100%; // 1rem = 1px ===> calc(1 / 16 * 100%)
+	--font-size: #{adapt(18, 16)};
+	--font-family-main: "Montserrat-VF", "Montserrat", sans-serif;
+	--font-family-title: "BonaNova", serif;
+	--font-family-title-second: "Forum", serif;
+
+	--line-height: 120%;
+	--letter-spacing: auto;
+}

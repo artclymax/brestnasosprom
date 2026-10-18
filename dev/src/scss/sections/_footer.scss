@@ -1,0 +1,79 @@
+@use "../tools" as *;
+
+.footer {
+	width: 100%;
+
+	padding-top: adapt(45, 32);
+	padding-bottom: adapt(45, 10);
+
+	&__container {
+		@include media($tablet) {
+			@include flex-column;
+			align-items: center;
+			gap: 26px;
+		}
+	}
+
+	&__info {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		gap: 16px;
+		text-align: center;
+		@include media($mobile) {
+			border: 0.6px solid rgba(255, 255, 255, 0.4);
+			border-radius: 6px;
+			backdrop-filter: blur(6px);
+			box-shadow: 0 17px 46px 0 rgba(233, 222, 177, 0.1);
+			background: rgba(30, 35, 24, 0.6);
+			flex-direction: column;
+			padding: 10px;
+			width: 100%;
+		}
+		& > * {
+			@include media($mobile, min) {
+				border: 0.6px solid rgba(255, 255, 255, 0.4);
+				border-radius: 6px;
+				backdrop-filter: blur(6px);
+				box-shadow: 0 17px 46px 0 rgba(233, 222, 177, 0.1);
+				background: rgba(30, 35, 24, 0.6);
+				padding: 5px;
+			}
+			color: var(--color-accent);
+
+			font-family: var(--font-family-title);
+			font-weight: 400;
+			font-size: adapt(14, 10);
+			line-height: 120%;
+			text-transform: uppercase;
+		}
+	}
+
+	&__logo {
+	}
+
+	&__copy {
+		font-size: adapt(14, 10);
+		span {
+			font-family: var(--font-family-title-second);
+		}
+	}
+
+	&__link {
+		font-size: inherit;
+		text-decoration: underline;
+		transition: all 0.3s;
+		font-size: adapt(14, 10);
+		@include hover {
+			color: var(--color-accent-hover);
+		}
+	}
+}
+.container {
+}
+.logo {
+}
+.visible-mobile {
+}
+.link {
+}

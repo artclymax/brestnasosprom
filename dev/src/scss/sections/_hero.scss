@@ -1,0 +1,22 @@
+@use "../tools" as *;
+
+.hero {
+	padding-block: 24px;
+	
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: adapt(46, 20, $tablet);
+	}
+
+	&__descr-left {
+		text-align: right;
+	}
+
+	&__logo {
+	}
+
+	&__descr-right {
+	}
+}

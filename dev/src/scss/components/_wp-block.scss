@@ -1,0 +1,21 @@
+@use "../tools" as *;
+
+.wp-block-media-text {
+	gap: 24px;
+	&__content {
+		padding: unset !important;
+	}
+	&:not(:last-child) {
+		margin-bottom: adapt(56, 24);
+	}
+}
+figure.wp-block-gallery.has-nested-images {
+	--wp--style--gallery-gap-default: #{adapt(16, 10)};
+	@include media($mobile) {
+		flex-wrap: wrap;
+
+		& > * {
+			flex: 1 1 100%;
+		}
+	}
+}
